@@ -1,0 +1,7 @@
+<h2><a href='#!/'>Home</a> | <a ng-if='!loggedin.user' href='#!/login'>Login</a><a href='#!/' ng-if='loggedin.user' ng-click='logout()'>Logout</a></h2>
+
+User Name: <input type=text ng-model=logininfo.user><br>
+<span style="color:red">{{err}}</span><br>
+Password: <input type=text ng-model=logininfo.password><br>
+<button ng-click=login()>Log In</button>
+or <a href='#!/register'>register</a> a new account

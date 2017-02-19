@@ -1,0 +1,13 @@
+<h2><a href='#!/'>Home</a> | <a ng-if='!loggedin.user' href='#!/login'>Login</a><a href='#!/' ng-if='loggedin.user' ng-click='logout'>Logout</a></h2>
+
+<form novalidate class="css-form">
+  First Name:<input type=text ng-model=user.name.first required><br><br>
+  Last Name:<input type=text ng-model=user.name.last required><br><br>
+  User Name:<input type=text ng-model=user.name.user required><br><br>
+  Email:<input type=email ng-model=user.email required><br><br>
+  Birthday:<input type=date ng-model=user.birthday max=date.now() required><br><br>
+  Password:<input type=password ng-model=user.password required><br>
+  <span style="color:red">{{error.passwordConfirm}}</span><br>
+  Confirm Password:<input type=password ng-model=password required><br><br>
+  <button ng-click=register()>Register</button>
+</form>
